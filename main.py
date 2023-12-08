@@ -9,7 +9,6 @@ st.set_page_config(page_title="Workout Volume",
 from workoutSplit import display_workout_split
 from analytics import display_analytics
 from tracking import display_tracking
-
 # Title 
 st.markdown("<h1 style='text-align: center; color: black;'>Workout Tracking App</h1>", unsafe_allow_html=True)
 
@@ -29,3 +28,4 @@ elif selected == "Analytics":
     display_analytics()
 elif selected == "Tracking":
     display_tracking()
+    

@@ -17,7 +17,10 @@ pullSplit = load_workout_data("Pull", list(range(4))).dropna(how="all")
 legsSplit = load_workout_data("Legs", list(range(4))).dropna(how="all")
 
 # Loading tracking data
-pushExisting = load_tracking_data("Push", list(range(6, 13))).dropna(how="all")
-pullExisting = load_tracking_data("Pull", list(range(6, 14))).dropna(how="all")
-legsExisting = load_tracking_data("Legs", list(range(6, 13))).dropna(how="all")
+pushExisting = load_tracking_data("Push", list(range(4, 11))).dropna(how="all")
+pullExisting = load_tracking_data("Pull", list(range(4, 12))).dropna(how="all")
+legsExisting = load_tracking_data("Legs", list(range(4, 11))).dropna(how="all")
 
+pushData = pd.concat([pushSplit, pushExisting], ignore_index=True)
+pullData = pd.concat([pullSplit, pullExisting], ignore_index=True)
+legsData = pd.concat([legsSplit, legsExisting], ignore_index=True)
